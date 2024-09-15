@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    border:1px solid black;
+}
+
+
+.chassis{
+    margin:100px auto;
+    border: 7px solid red;
+    width:fit-content
+    
+}
+
+.screen{
+    height:85px;
+}
+
+.digits{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width:200px;
+    height:400px;
+}
+
+
+button{
+    width:60px;
+    height:60px;
+    /*margin:0px auto;*/
+}
+
+.container{
+    display: flex;
+    gap:16px;
+}
+
+.operations{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
