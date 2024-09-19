@@ -20,8 +20,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-    width:200px;
+    justify-content: space-evenly;
+    padding:8px;
+    width:250px;
     height:400px;
 }
 
@@ -40,5 +41,10 @@ button{
 .operations{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding:8px;
+}
+
+.screen{
+    text-align: right;
 }
