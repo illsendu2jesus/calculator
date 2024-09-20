@@ -1,19 +1,27 @@
 *{
     box-sizing: border-box;
     margin:0;
-    border:1px solid black;
+    border-radius: 15px;
+    font-weight: bold;
+   /* border:1px solid black;*/
 }
 
 
 .chassis{
-    margin:100px auto;
-    border: 7px solid red;
-    width:fit-content
+    margin:180px auto;
+   /* border: 7px solid red;*/
+    width:fit-content;
+    background-color: #FF9874;
+    max-width: 420px;
+    padding:10px;
+
     
 }
 
 .screen{
-    height:85px;
+    height:100px;
+    padding:35px 15px 0px 0px;
+    margin-bottom: 25px;
 }
 
 .digits{
@@ -21,8 +29,9 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    gap:10px;
     padding:8px;
-    width:250px;
+    width:290px;
     height:400px;
 }
 
@@ -30,7 +39,8 @@
 button{
     width:60px;
     height:60px;
-    /*margin:0px auto;*/
+    background-color: #7695FF;
+    border:none;
 }
 
 .container{
@@ -40,11 +50,31 @@ button{
 
 .operations{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding:8px;
 }
 
 .screen{
     text-align: right;
+    background-color: #FFD7C4;
+}
+
+sup{
+    border:none;
+}
+
+.digits button{
+    background-color: #9DBDFF;
+}
+
+.clear{
+    background-color: wheat;
+}
+
+.result{
+    background-color: #0D7C66 !important;
+    width:120px;
 }

@@ -13,10 +13,36 @@ function operate(){
 
         let mode = e.target.className;
         let content = e.target.textContent;
-        //console.log(mode);
+
+        console.log(mode);
+
         if(mode=='b-operation'){
             operation = content;
-            total.textContent = operation;
+            total.textContent += operation;
+        }
+        else if(mode=='mod'){
+            operation = mode;
+            total.textContent += content;
+            console.log('er');
+        }
+
+        else if(mode=='square'){
+            operation = mode;
+            let holder = "<sup>2</sup>"
+            total.innerHTML = n1 + '' +holder;
+        }
+
+        else if(mode=='clear'){
+            n1 = '';
+            n2 = '';
+            result = '';
+            operation = '';
+            total.textContent = '';
+        }
+
+        else if(mode=='root'){
+            operation = mode;
+            total.textContent += content;
         }
  
         else if(operation == ''){
@@ -26,7 +52,8 @@ function operate(){
             else 
             {
                 n1 += content;
-                total.textContent = n1;
+                total.textContent = ''
+                total.textContent += n1;
             }
             
         }
@@ -37,11 +64,11 @@ function operate(){
         else{
 
             n2 += content;
-            total.textContent = n2;
+            total.textContent += n2[n2.length -1];
         }
 
-        //console.log(n1);
-        //console.log(n2);
+       // console.log(mode);
+       // console.log(operation);
         
     })})
     
@@ -55,6 +82,7 @@ function calculate(){
     if(n4 == NaN){
         n4 = 0;
     }
+    //console.log(operation);
 
     if(operation=='+'){
         result = n3 +n4;
@@ -66,9 +94,21 @@ function calculate(){
         result = n3*n4;
     }
     else if(operation=='/'){
-        result = n3/n4;
+        if(n4==0){
+            result = 'ERROR:division by zero'
+        }
+        else{
+        result = n3/n4;}
     }
-    result.toPrecision(5);
+    else if(operation=='root'){
+        result = Math.sqrt(n4);
+    }
+    else if(operation=='mod'){
+        result = n3 % n4;
+    }
+    else if(operation=='square'){
+        result = n3 ** 2;
+    }
     dipslay();
 }
 function dipslay(){
