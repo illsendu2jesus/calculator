@@ -48,13 +48,17 @@ button{
     gap:16px;
 }
 
-.operations{
+.operations,.ops{
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding:8px;
+}
+
+.ops{
+    justify-content: space-evenly;
 }
 
 .screen{
@@ -76,5 +80,8 @@ sup{
 
 .result{
     background-color: #0D7C66 !important;
-    width:120px;
+}
+
+.del{
+    background-color: #c22b0b!important;
 }
